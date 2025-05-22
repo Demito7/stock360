@@ -27,6 +27,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@types/react-window": "^1.8.8",
+    "@vercel/static-build": "^2.7.7",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "concurrently": "^9.1.2",
     "eslint": "^9.22.0",

@@ -9,7 +9,8 @@
     "dev": "concurrently \"vite --config client/vite.config.ts\" \"nodemon server/index.js\"",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "cors": "^2.8.5",

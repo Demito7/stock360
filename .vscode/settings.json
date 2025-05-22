@@ -1,0 +1,5 @@
+{
+    "git.ignoreLimitWarning": true,
+    "better-comments.multilineComments": true,
+    "better-comments.highlightPlainText": true
+}

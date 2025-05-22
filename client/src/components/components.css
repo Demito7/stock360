@@ -1,0 +1,21 @@
+/* navegacion */
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5% 0 5%;
+}
+
+.navegacion-titulo {
+    font-size: 30px;
+}
+
+.barra-botones {
+    display: flex;
+    flex-direction: row;
+}
+
+.barra-boton {
+    padding: 1%;
+}

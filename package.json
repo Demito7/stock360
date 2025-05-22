@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"vite --config client/vite.config.ts\" \"nodemon server/index.js\"",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

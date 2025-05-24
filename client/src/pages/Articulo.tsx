@@ -1,8 +1,8 @@
 import "./pages.css";
-import Navegacion from "../Navegacion";
+import Navegacion from "../components/Navegacion";
 import ArticuloModal from "../modals/ArticuloModal";
 import { useEffect, useState } from "react";
-import { tiposDeDatos } from "../../types";
+import { tiposDeDatos } from "../types";
 import { FixedSizeList as List } from "react-window";
 
 function Articulo() {

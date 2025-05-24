@@ -1,5 +1,5 @@
 import "./pages.css";
-import Navegacion from "../Navegacion";
+import Navegacion from "../components/Navegacion";
 
 function Deudores() {
     return (

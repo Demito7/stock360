@@ -1,9 +1,9 @@
-import Articulo from "./components/pages/Articulo"
-import Proveedor from "./components/pages/Proveedor"
-import Deudor from './components/pages/Deudor'
-import Notificacion from './components/pages/Notificacion'
-import Configuracion from './components/pages/Configuracion'
-import Usuario from './components/pages/Usuario'
+import Articulo from "./pages/Articulo"
+import Proveedor from "./pages/Proveedor"
+import Deudor from './pages/Deudor'
+import Notificacion from './pages/Notificacion'
+import Configuracion from './pages/Configuracion'
+import Usuario from './pages/Usuario'
 import './app.css'
 import { Routes, Route } from 'react-router-dom'
 

@@ -1,14 +1,14 @@
 import "./pages.css";
-import Navegacion from "../Navegacion";
+import Navegacion from "../components/Navegacion";
 
-function Configuraciones() {
+function Proveedores() {
     return (
         <>
             <div className="navegacion">
-                <h2>Configuracion</h2>
+                <h2>Proveedor</h2>
                 <Navegacion />
             </div>
         </>
     )
 }
-export default Configuraciones
+export default Proveedores

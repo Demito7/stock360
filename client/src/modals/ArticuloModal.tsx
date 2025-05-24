@@ -1,6 +1,6 @@
 import "./modals.css";
 import { useEffect, useState } from "react";
-import { tiposDeDatos, modalPropiedades, ValoresEnCero } from "../../types";
+import { tiposDeDatos, modalPropiedades, ValoresEnCero } from "../types";
 
 
 function AModal({ modalAbierta, modalCerrar, modalGuardar, articuloSeleccionado, eliminarYCerrarModal,

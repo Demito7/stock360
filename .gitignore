@@ -7,18 +7,33 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Builds
+dist/
+client/dist/
+server/dist/
+dist-ssr/
+
+# Environments
+*.env
 *.local
 
-# Editor directories and files
-.vscode/*
+# IDE/editor folders
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Sistema de cache de TypeScript
+**/.turbo
+*.tsbuildinfo
+node_modules/.tmp/

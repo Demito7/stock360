@@ -1,12 +1,14 @@
 import pkg from "pg";
+import dotenv from "dotenv";
+dotenv.config();
+
 const { Pool } = pkg;
 
 const pool = new Pool({
-  user: "postgres",
-  password: "2355",
-  host: "localhost",
-  port: 5432,
-  database: "stock360"
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false // necesario para conectar desde Render
+  }
 });
 
 export default pool;

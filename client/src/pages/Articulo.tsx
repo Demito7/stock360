@@ -6,6 +6,9 @@ import { tiposDeDatos } from "../types";
 import { FixedSizeList as List } from "react-window";
 
 function Articulo() {
+
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const [articulos, setArticulos] = useState<tiposDeDatos[]>([]);
     const [articuloModal, setArticuloModal] = useState(false);
     const [articuloSeleccionado, setArticuloSeleccionado] = useState<tiposDeDatos | null>(null);
@@ -27,7 +30,7 @@ function Articulo() {
     useEffect(() => {
         const obtenerArticulos = async () => {
             try {
-                const res = await fetch("http://localhost:5000/articulo");
+                const res = await fetch(`${API_URL}/articulo`);
                 if (!res.ok) throw new Error("No se pudieron obtener los artículos.");
                 const data: tiposDeDatos[] = await res.json();
                 setArticulos(data);
@@ -41,8 +44,9 @@ function Articulo() {
     const guardarArticulo = async (nuevoArticulo: tiposDeDatos): Promise<boolean> => {
         const metodo = nuevoArticulo.id ? "PUT" : "POST";
         const url = nuevoArticulo.id
-            ? `http://localhost:5000/articulo/${nuevoArticulo.id}`
-            : "http://localhost:5000/articulo";
+            ? `${API_URL}/articulo/${nuevoArticulo.id}`
+            : `${API_URL}/articulo`;
+
         const articuloLimpio = { ...nuevoArticulo };
         if (metodo === "POST") delete articuloLimpio.id;
 
@@ -70,9 +74,10 @@ function Articulo() {
 
     const eliminarArticulo = async (id: number) => {
         try {
-            const res = await fetch(`http://localhost:5000/articulo/${id}`, {
+            const res = await fetch(`${API_URL}/articulo/${id}`, {
                 method: "DELETE",
             });
+
             if (res.ok) {
                 setArticulos((prev) => prev.filter((articulo) => articulo.id !== id));
             }

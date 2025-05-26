@@ -1,7 +1,6 @@
 {
-  "projects": [],
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/dist",
-  "ignoreCommand": "echo 'skip server'",
-  "devCommand": "cd client && npm run dev"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "ignoreCommand": "echo 'skip'",
+  "devCommand": "npm run dev"
 }

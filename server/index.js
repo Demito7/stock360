@@ -4,7 +4,11 @@ import pool from "./db.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://stock360si.vercel.app',
+    credentials: true
+}));
+
 app.use(express.json());
 
 function normalizarDatosArticulo(datos) {

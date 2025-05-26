@@ -7,7 +7,8 @@ const app = express();
 // CORS bien configurado
 const whitelist = [
   "http://localhost:5173",
-  "https://stock360si.vercel.app"
+  "https://stock360si.vercel.app",
+  "https://stock360-liart.vercel.app"
 ];
 
 app.use(cors({

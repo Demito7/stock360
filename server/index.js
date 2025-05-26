@@ -5,9 +5,21 @@ import pool from "./db.js";
 const app = express();
 
 app.use(cors({
-    origin: 'https://stock360si.vercel.app',
-    credentials: true
+  origin: function (origin, callback) {
+    const whitelist = [
+      "http://localhost:5173", // para desarrollo
+      "https://stock360si.vercel.app" // para producción
+    ];
+    if (!origin || whitelist.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+  optionsSuccessStatus: 200
 }));
+
 
 app.use(express.json());
 
